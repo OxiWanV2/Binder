@@ -10,9 +10,7 @@ Public Class Form1
     Private clickX As Integer
     Private clickY As Integer
     Dim listeFichiers As List(Of FichierWordInfo) = ChargerListeFichiers()
-    Private filename As String
     Private listeFormulaires As New List(Of Form)
-    Private listeFichierss As List(Of FichierWordInfo)
 
     Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
         If drag = True Then
@@ -73,7 +71,7 @@ Public Class Form1
     End Sub
     Private cheminJSON As String = "C:\Users\" + Environment.UserName + "\AppData\Local\Binder\path.json"
 
-    Private Sub btnChoisirFichier_Click(sender As Object, e As EventArgs) Handles btnChoisirFichier.Click
+    Private Sub BtnChoisirFichier_Click(sender As Object, e As EventArgs) Handles btnChoisirFichier.Click
         loading.Visible = True
         Dim openFileDialog As New OpenFileDialog()
 
