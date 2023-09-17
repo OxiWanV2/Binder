@@ -1,0 +1,16 @@
+D:\repos\Binder\bin\Debug\Binder.exe.config
+D:\repos\Binder\bin\Debug\Binder.exe
+D:\repos\Binder\bin\Debug\Binder.pdb
+D:\repos\Binder\bin\Debug\Binder.xml
+D:\repos\Binder\obj\Debug\Binder.vbproj.AssemblyReference.cache
+D:\repos\Binder\obj\Debug\Binder.vbproj.SuggestedBindingRedirects.cache
+D:\repos\Binder\obj\Debug\Binder.Form1.resources
+D:\repos\Binder\obj\Debug\Binder.Resources.resources
+D:\repos\Binder\obj\Debug\Binder.vbproj.GenerateResource.cache
+D:\repos\Binder\obj\Debug\Binder.vbproj.CoreCompileInputs.cache
+D:\repos\Binder\obj\Debug\Binder.exe
+D:\repos\Binder\obj\Debug\Binder.xml
+D:\repos\Binder\obj\Debug\Binder.pdb
+D:\repos\Binder\bin\Debug\Newtonsoft.Json.dll
+D:\repos\Binder\bin\Debug\Newtonsoft.Json.xml
+D:\repos\Binder\obj\Debug\Binder.vbproj.CopyComplete
