@@ -1,4 +1,4 @@
-
+theme: minima
 ![Binder](https://github.com/OxiWanV2/Binder/blob/main/Binder.png?raw=true)
 
 
