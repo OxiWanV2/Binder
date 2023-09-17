@@ -1,8 +1,5 @@
-﻿Imports Microsoft.VisualBasic.Devices
-Imports System.IO
+﻿Imports System.IO
 Imports Newtonsoft.Json
-Imports System.Collections.Generic
-Imports System.Reflection.Emit
 
 Public Class Form1
     Private drag As Boolean = True
@@ -10,7 +7,8 @@ Public Class Form1
     Private clickX As Integer
     Private clickY As Integer
     Dim listeFichiers As List(Of FichierWordInfo) = ChargerListeFichiers()
-    Private listeFormulaires As New List(Of Form)
+    Private ReadOnly listeFormulaires As New List(Of Form)
+    Private ReadOnly cheminJSON As String = "C:\Users\" + Environment.UserName + "\AppData\Local\Binder\path.json"
 
     Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
         If drag = True Then
@@ -69,24 +67,24 @@ Public Class Form1
     Private Sub PictureBox2_MouseClick(sender As Object, e As MouseEventArgs) Handles PictureBox2.MouseClick
         Close()
     End Sub
-    Private cheminJSON As String = "C:\Users\" + Environment.UserName + "\AppData\Local\Binder\path.json"
 
     Private Sub BtnChoisirFichier_Click(sender As Object, e As EventArgs) Handles btnChoisirFichier.Click
         loading.Visible = True
-        Dim openFileDialog As New OpenFileDialog()
-
-        openFileDialog.Filter = "Fichiers Word (*.docx)|*.docx"
-        openFileDialog.Title = "Sélectionner un fichier Word"
+        Dim openFileDialog As New OpenFileDialog With {
+            .Filter = "Fichiers Word (*.docx)|*.docx",
+            .Title = "Sélectionner un fichier Word"
+        }
 
         If openFileDialog.ShowDialog() = DialogResult.OK Then
             Dim nomFichier As String = Path.GetFileName(openFileDialog.FileName)
             Dim cheminFichier As String = openFileDialog.FileName
             Dim listeFichiers As List(Of FichierWordInfo) = ChargerListeFichiers()
 
-            Dim fichierInfo As New FichierWordInfo()
-            fichierInfo.Nom = nomFichier
-            fichierInfo.Chemin = cheminFichier
-            fichierInfo.Categorie = categorie.Text
+            Dim fichierInfo As New FichierWordInfo With {
+                .Nom = nomFichier,
+                .Chemin = cheminFichier,
+                .Categorie = categorie.Text
+            }
 
             listeFichiers.Add(fichierInfo)
 
@@ -186,11 +184,12 @@ Public Class Form1
         Dim categorieFiltree = listeFichiers.Where(Function(f) f.Categorie = categorie.Text).ToList()
 
         For Each fichierInfo In categorieFiltree
-            Dim nouveauPanel As New Panel()
-            nouveauPanel.BorderStyle = Panel6.BorderStyle
-            nouveauPanel.Size = Panel6.Size
-            nouveauPanel.BackColor = Panel6.BackColor
-            nouveauPanel.Location = Panel6.Location
+            Dim nouveauPanel As New Panel With {
+                .BorderStyle = Panel6.BorderStyle,
+                .Size = Panel6.Size,
+                .BackColor = Panel6.BackColor,
+                .Location = Panel6.Location
+            }
 
             For Each ctrl As Control In Panel6.Controls
                 If TypeOf ctrl Is Button Then
@@ -222,22 +221,24 @@ Public Class Form1
 
             Dim originalPanel7 As Panel = Panel6.Controls.OfType(Of Panel)().FirstOrDefault()
             If originalPanel7 IsNot Nothing Then
-                Dim nouveauPanel7 As New Panel()
-                nouveauPanel7.Size = originalPanel7.Size
-                nouveauPanel7.Location = originalPanel7.Location
-                nouveauPanel7.BackColor = originalPanel7.BackColor
+                Dim nouveauPanel7 As New Panel With {
+                    .Size = originalPanel7.Size,
+                    .Location = originalPanel7.Location,
+                    .BackColor = originalPanel7.BackColor
+                }
 
                 nouveauPanel.Controls.Add(nouveauPanel7)
             End If
 
-            Dim textBox As New TextBox()
-            textBox.Text = fichierInfo.Nom
-            textBox.ReadOnly = True
-            textBox.BackColor = Color.FromArgb(5, 6, 10)
-            textBox.ForeColor = Color.White
-            textBox.BorderStyle = BorderStyle.None
-            textBox.Size = New Size(250, 20)
-            textBox.Location = New Point(16, 9)
+            Dim textBox As New TextBox With {
+                .Text = fichierInfo.Nom,
+                .ReadOnly = True,
+                .BackColor = Color.FromArgb(5, 6, 10),
+                .ForeColor = Color.White,
+                .BorderStyle = BorderStyle.None,
+                .Size = New Size(250, 20),
+                .Location = New Point(16, 9)
+            }
             nouveauPanel.Controls.Add(textBox)
 
             FlowLayoutPanel1.Controls.Add(nouveauPanel)
