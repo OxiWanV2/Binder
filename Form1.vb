@@ -43,7 +43,6 @@ Public Class Form1
         Panel4.Visible = False
         Panel3.Visible = False
         Panel2.Visible = False
-        PictureBox4.Visible = False
         PictureBox1.Visible = False
         PictureBox3.Visible = True
     End Sub
@@ -55,7 +54,6 @@ Public Class Form1
         Panel4.Visible = True
         Panel3.Visible = True
         Panel2.Visible = True
-        PictureBox4.Visible = True
         PictureBox1.Visible = True
         PictureBox3.Visible = False
     End Sub
@@ -71,7 +69,7 @@ Public Class Form1
     Private Sub BtnChoisirFichier_Click(sender As Object, e As EventArgs) Handles btnChoisirFichier.Click
         loading.Visible = True
         Dim openFileDialog As New OpenFileDialog With {
-            .Filter = "Fichiers Word (*.docx)|*.docx",
+            .Filter = "Fichiers Word (*.docx)|*.docx|Fichiers Excel (*.xlsx)|*.xlsx",
             .Title = "Sélectionner un fichier Word"
         }
 
@@ -205,12 +203,12 @@ Public Class Form1
                     nouveauBtn.Location = originalBtn.Location
 
                     If nouveauPanel.Controls.Count = 0 Then
-                        nouveauBtn.BackgroundImage = del_picture.Image
+                        nouveauBtn.BackgroundImage = Button3.BackgroundImage
 
                         AddHandler nouveauBtn.MouseClick, AddressOf SupprimerFichierEtForme
                         nouveauBtn.Tag = fichierInfo.Nom
                     Else
-                        nouveauBtn.BackgroundImage = open_picture.Image
+                        nouveauBtn.BackgroundImage = Button2.BackgroundImage
                         AddHandler nouveauBtn.MouseClick, AddressOf OuvrirFichierWord
                         nouveauBtn.Tag = fichierInfo.Nom
                     End If
@@ -232,6 +230,7 @@ Public Class Form1
 
             Dim textBox As New TextBox With {
                 .Text = fichierInfo.Nom,
+                .Font = TextBox1.Font,
                 .ReadOnly = True,
                 .BackColor = Color.FromArgb(5, 6, 10),
                 .ForeColor = Color.White,

@@ -64,11 +64,11 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Minecraft", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Bahnschrift", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(15, 6)
+        Me.Label1.Location = New System.Drawing.Point(16, 8)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(109, 30)
+        Me.Label1.Size = New System.Drawing.Size(83, 29)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Binder"
         '
@@ -99,7 +99,7 @@ Partial Class Form1
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(29, 13)
         Me.Label2.TabIndex = 3
-        Me.Label2.Text = "V1.3"
+        Me.Label2.Text = "V1.4"
         '
         'Panel3
         '
@@ -154,6 +154,7 @@ Partial Class Form1
         '
         Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(10, Byte), Integer))
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.Color.White
         Me.TextBox1.Location = New System.Drawing.Point(16, 9)
         Me.TextBox1.Name = "TextBox1"
@@ -197,8 +198,8 @@ Partial Class Form1
         'PictureBox4
         '
         Me.PictureBox4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox4.Image = Global.Binder.My.Resources.Resources.reduce
+        Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Default
+        Me.PictureBox4.Image = Global.Binder.My.Resources.Resources.icons8_réduire_la_fenêtre_48
         Me.PictureBox4.Location = New System.Drawing.Point(668, 7)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(36, 33)
@@ -209,9 +210,9 @@ Partial Class Form1
         'PictureBox3
         '
         Me.PictureBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox3.Image = Global.Binder.My.Resources.Resources.reduce
-        Me.PictureBox3.Location = New System.Drawing.Point(709, 7)
+        Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Default
+        Me.PictureBox3.Image = Global.Binder.My.Resources.Resources.icons8_restaurer_la_fenêtre_48
+        Me.PictureBox3.Location = New System.Drawing.Point(710, 7)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(36, 33)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -222,15 +223,16 @@ Partial Class Form1
         'Button5
         '
         Me.Button5.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Button5.BackgroundImage = Global.Binder.My.Resources.Resources.options
+        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(13, Byte), Integer), CType(CType(21, Byte), Integer))
+        Me.Button5.BackgroundImage = Global.Binder.My.Resources.Resources.icons8_liste_48
         Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(10, Byte), Integer))
+        Me.Button5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(13, Byte), Integer), CType(CType(21, Byte), Integer))
         Me.Button5.Location = New System.Drawing.Point(346, 12)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(22, 22)
         Me.Button5.TabIndex = 10
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.Button5.UseVisualStyleBackColor = False
         '
         'open_picture
         '
@@ -255,8 +257,8 @@ Partial Class Form1
         'PictureBox2
         '
         Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox2.Image = Global.Binder.My.Resources.Resources.close2
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Default
+        Me.PictureBox2.Image = Global.Binder.My.Resources.Resources.icons8_fermer_48
         Me.PictureBox2.Location = New System.Drawing.Point(752, 6)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(36, 33)
@@ -267,8 +269,8 @@ Partial Class Form1
         'PictureBox1
         '
         Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox1.Image = Global.Binder.My.Resources.Resources.maximize
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.PictureBox1.Image = Global.Binder.My.Resources.Resources.icons8_maximiser_la_fenêtre_48
         Me.PictureBox1.Location = New System.Drawing.Point(710, 6)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(36, 33)
@@ -278,6 +280,7 @@ Partial Class Form1
         '
         'loading
         '
+        Me.loading.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.loading.BackgroundImage = Global.Binder.My.Resources.Resources.ZZ5H
         Me.loading.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.loading.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -290,7 +293,7 @@ Partial Class Form1
         '
         'Button7
         '
-        Me.Button7.BackgroundImage = Global.Binder.My.Resources.Resources.cpu
+        Me.Button7.BackgroundImage = CType(resources.GetObject("Button7.BackgroundImage"), System.Drawing.Image)
         Me.Button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(44, Byte), Integer))
@@ -302,7 +305,7 @@ Partial Class Form1
         '
         'Button6
         '
-        Me.Button6.BackgroundImage = Global.Binder.My.Resources.Resources.icons8_scratch_50
+        Me.Button6.BackgroundImage = Global.Binder.My.Resources.Resources.icons8_bleu_blockly_48
         Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(44, Byte), Integer))
@@ -314,7 +317,7 @@ Partial Class Form1
         '
         'Button4
         '
-        Me.Button4.BackgroundImage = Global.Binder.My.Resources.Resources.binary_code
+        Me.Button4.BackgroundImage = Global.Binder.My.Resources.Resources.icons8_éditeur_de_registre_48
         Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(44, Byte), Integer))
@@ -327,7 +330,7 @@ Partial Class Form1
         'btnChoisirFichier
         '
         Me.btnChoisirFichier.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnChoisirFichier.BackgroundImage = Global.Binder.My.Resources.Resources.add_file
+        Me.btnChoisirFichier.BackgroundImage = Global.Binder.My.Resources.Resources.icons8_importer_48
         Me.btnChoisirFichier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnChoisirFichier.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnChoisirFichier.ForeColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(44, Byte), Integer))
@@ -352,7 +355,7 @@ Partial Class Form1
         'Button3
         '
         Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.BackgroundImage = Global.Binder.My.Resources.Resources.delete
+        Me.Button3.BackgroundImage = Global.Binder.My.Resources.Resources.icons8_effacer_48
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(10, Byte), Integer))
@@ -365,7 +368,7 @@ Partial Class Form1
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.BackgroundImage = Global.Binder.My.Resources.Resources.open
+        Me.Button2.BackgroundImage = Global.Binder.My.Resources.Resources.icons8_ouvrir_48
         Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(10, Byte), Integer))

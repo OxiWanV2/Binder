@@ -178,6 +178,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Binder.ico" />
+    <None Include="Resources\icons8-restaurer-la-fenêtre-48.png" />
+    <None Include="Resources\icons8-ouvrir-48.png" />
+    <None Include="Resources\icons8-effacer-48.png" />
+    <None Include="Resources\icons8-liste-48.png" />
+    <None Include="Resources\icons8-bleu-blockly-48.png" />
+    <None Include="Resources\icons8-éditeur-de-registre-48.png" />
+    <None Include="Resources\icons8-importer-48.png" />
+    <None Include="Resources\icons8-fermer-48.png" />
+    <None Include="Resources\icons8-réduire-48.png" />
+    <None Include="Resources\icons8-maximiser-la-fenêtre-48.png" />
+    <None Include="Resources\icons8-réduire-la-fenêtre-48.png" />
     <None Include="Resources\ZZ5H.gif" />
     <None Include="Resources\cpu.png" />
   </ItemGroup>
